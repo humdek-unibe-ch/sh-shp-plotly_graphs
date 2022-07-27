@@ -24,7 +24,7 @@ SET @id_field = (SELECT `id` FROM `fields` WHERE `name` = 'title');
 INSERT IGNORE INTO `styles_fields` (`id_styles`, `id_fields`, `default_value`, `help`) VALUES (get_style_id('graph'), get_field_id('title'), NULL, 'The title to be rendered on top of teh graph. This field is here purely for convenience as the title of a graph can also be defined in the field `layout`');
 
 -- add style graphSankey and all its fields
-INSERT IGNORE INTO `styles` (`id`, `name`, `id_type`, `id_group`, `description`) VALUES (NULL, get_style_id('graphSankey'), '0000000002', (SELECT id FROM styleGroup WHERE `name` = 'Graph' LIMIT 1), 'Create a Sankey diagram from user input data or imported static data.');
+INSERT IGNORE INTO `styles` (`id`, `name`, `id_type`, `id_group`, `description`) VALUES (NULL, 'graphSankey', '0000000002', (SELECT id FROM styleGroup WHERE `name` = 'Graph' LIMIT 1), 'Create a Sankey diagram from user input data or imported static data.');
 SET @id_style = LAST_INSERT_ID();
 
 SET @id_field = (SELECT `id` FROM `fields` WHERE `name` = 'title');
