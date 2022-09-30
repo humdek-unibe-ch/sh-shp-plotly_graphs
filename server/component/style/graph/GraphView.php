@@ -66,6 +66,9 @@ class GraphView extends StyleView
         parent::__construct($model);
         $this->title = $this->model->get_db_field("title");
         $this->traces = $this->model->get_db_field("traces");
+        if(!is_array($this->traces)){
+            $this->traces = json_decode($this->traces, true);
+        }
         $this->layout = $this->model->get_db_field("layout");
         $this->config = $this->model->get_db_field("config");
         $this->data_config = $this->model->get_db_field("data_config");
