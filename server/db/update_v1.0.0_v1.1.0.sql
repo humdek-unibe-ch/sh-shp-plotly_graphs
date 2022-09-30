@@ -1,6 +1,7 @@
 -- add plugin entry in the plugin table
-INSERT IGNORE INTO plugins (name, version) 
-VALUES ('plotly-graphs', 'v1.1.0');
+UPDATE plugins
+SET version = 'v1.1.0'
+WHERE name = 'plotly-graphs';
 
 INSERT IGNORE INTO `fieldType` (`id`, `name`, `position`) VALUES (NULL, 'dynamic_json', '15');
 
