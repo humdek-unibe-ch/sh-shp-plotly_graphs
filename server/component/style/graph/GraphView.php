@@ -73,6 +73,7 @@ class GraphView extends StyleView
         $this->title = $this->model->get_db_field("title");
         $this->traces = $this->model->get_db_field("traces");
         if(!is_array($this->traces)){
+            $this->traces = stripslashes($this->traces);
             $this->traces = json_decode($this->traces, true);
         }
         $this->layout = $this->model->get_db_field("layout");
