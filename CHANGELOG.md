@@ -1,3 +1,7 @@
+# v1.2.0
+### Bugfix
+ - add field `debug` to style `graph` if it is not already added
+
 # v1.1.2
 ### Bugfix
  -  strip slashes when the `data_config` returns data as array
