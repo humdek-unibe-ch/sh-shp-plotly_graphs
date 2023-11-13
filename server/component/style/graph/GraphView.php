@@ -255,22 +255,19 @@ class GraphView extends StyleView
         return parent::get_css_includes($local);
     }
 
-    // /**
-    //  * Render the debug information
-    //  */
-    // public function output_debug()
-    // {
-    //     $debug = $this->model->get_db_field('debug', false);
-    //     if ($debug) {     
-    //         $res = $this->model->get_condition_result();
-    //         echo '<pre class="alert alert-warning">';
-    //         var_dump($res);
-    //         echo "</pre>";       
-    //         echo '<pre class="alert alert-warning">';
-    //         $this->output_graph_data();
-    //         echo "</pre>";
-    //     }
-    // }
+    /**
+     * Render the debug information
+     */
+    public function output_debug()
+    {
+        $debug = $this->model->get_db_field('debug', false);
+        if ($debug) {     
+            parent::output_debug();
+            echo '<pre class="alert alert-warning">';
+            $this->output_graph_data();
+            echo "</pre>";
+        }
+    }
 	
 }
 ?>

@@ -1,3 +1,7 @@
+# v1.2.1
+### New Features
+ - when output `debug`, use the parent method to output in `console.log`
+
 # v1.2.0
 ### Bugfix
  - add field `debug` to style `graph` if it is not already added
