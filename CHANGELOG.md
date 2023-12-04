@@ -1,3 +1,6 @@
+# v1.3.0
+ - field `traces` is now from type `json`, and from SelfHelp v6.6.0+ the json field can be mapped for dynamic variables
+
 # v1.2.1
 ### New Features
  - when output `debug`, use the parent method to output in `console.log`
@@ -17,7 +20,7 @@
 # v1.1.0
 ### New Features
 
- - Field `traces` is now from type `dynamic_json`
+ - field `traces` is now from type `dynamic_json`
 
 # v1.0.0
 
