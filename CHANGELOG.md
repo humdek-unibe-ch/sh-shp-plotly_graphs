@@ -1,3 +1,7 @@
+# v1.3.1
+### New Features
+ - load plugin version using `BaseHook` class
+
 # v1.3.0
  - field `traces` is now from type `json`, and from SelfHelp v6.6.0+ the json field can be mapped for dynamic variables
 
