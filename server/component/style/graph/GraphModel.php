@@ -68,10 +68,10 @@ class GraphModel extends StyleModel
      */
     protected function read_data_source()
     {
-        $sql = "SELECT * FROM view_data_tables WHERE table_name = :name";
+        $sql = "SELECT * FROM view_dataTables WHERE `name` = :name";
         $source = $this->db->query_db_first($sql,
             array("name" => $this->data_source));
-        return $this->user_input->get_data($source['id'], '', $this->single_user, $source['type']);
+        return $this->user_input->get_data($source['id'], '', $this->single_user);
     }
 
     /* Public Methods *********************************************************/
