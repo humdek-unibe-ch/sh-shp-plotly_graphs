@@ -80,7 +80,7 @@ class GraphSankeyView extends GraphView
      *  - `pre_computation`: the pre-computed sankey diagram data
      */
     protected function output_graph_opts() {
-        echo json_encode(array(
+        $grpah_opts = array(
             "cols" => $this->model->get_data_cols(),
             "types" => $this->model->get_data_types(),
             "link_color" => $this->model->get_link_color(),
@@ -91,7 +91,8 @@ class GraphSankeyView extends GraphView
             "is_grouped" => $this->model->get_is_grouped(),
             "min" => $this->model->get_min(),
             "pre_computation" => json_decode($this->raw_data)
-        ));
+        );
+        echo json_encode($grpah_opts);
     }
 
     /* Public Methods *********************************************************/

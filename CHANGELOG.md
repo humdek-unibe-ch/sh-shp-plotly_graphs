@@ -1,3 +1,7 @@
+# v1.3.3
+### Bugfix
+ - properly load `sankey` graph after the user input changes
+
 # v1.3.2 - Requires SelfHelp v7.0.0+
 ### New Features
  - make it compatible with the `user_input` refactoring
