@@ -230,7 +230,7 @@ class GraphView extends StyleView
             if (DEBUG) {
                 $local = array(__DIR__ . "/js/plotly.min.js", __DIR__ . "/js/graph.js");
             } else {
-                $local = array(__DIR__ . "/../../../../js/ext/plotly-graphs.min.js?v=" . rtrim(shell_exec("git describe --tags")));
+                $local = array(__DIR__ . "/../../../../js/ext/plotly-graphs.min.js?v=" . rtrim(shell_exec("git describe --tags") ?? ''));
             }
         }
         return parent::get_js_includes($local);
@@ -249,7 +249,7 @@ class GraphView extends StyleView
             if (DEBUG) {
                 $local = array(__DIR__ . "/css/graph.css");
             } else {
-                $local = array(__DIR__ . "/../../../../css/ext/plotly-graphs.min.css?v=" . rtrim(shell_exec("git describe --tags")));
+                $local = array(__DIR__ . "/../../../../css/ext/plotly-graphs.min.css?v=" . rtrim(shell_exec("git describe --tags") ?? ''));
             }
         }
         return parent::get_css_includes($local);
